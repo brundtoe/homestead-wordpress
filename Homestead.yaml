@@ -1,0 +1,23 @@
+ip: 192.168.10.12
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: /home/bent/sourcecode/wordpress
+      to: /home/vagrant/code
+
+sites:
+    - map: wp.local
+      to: /home/vagrant/code
+      php: "7.2"
+
+databases:
+    - wordpress
+
+name: wordpress
+
+hostname: wordpress
