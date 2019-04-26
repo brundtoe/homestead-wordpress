@@ -10,11 +10,17 @@ Migrering med duplicator
 - lav en backup med duplicator
 - lav det nye environment uden selve wordpress pakken
 - kopier backup filerne installer og zip filen til mappen som skal være wordpress roden
+- wordpress roden er folderen der er mappet nedenfor
 - start browseren med http://wp.local/installer.php
 - følg dialogen
+  - server wordpress
+  - database wordpress
+  - user homestead
+  - pwd secret
+- gå til wp.local/wp-admin
 - nu kan der logges in med usernavn **bent** og pwd fra den gamle installation (cDqU@uV9AaAi^JqSH
 
-- Der kan under installationen efter indlæsning af daabasen under options oprettes en ny admin bruger
+- Der kan under installationen efter indlæsning af databasen under options oprettes en ny admin bruger
 
 Den anvendte homestead.yaml
 ---------------------------
