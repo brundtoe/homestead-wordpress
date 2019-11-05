@@ -3,22 +3,37 @@ Opdateret 25. januar 2018
 
 Migrering er foretaget fra Homestead Wordpress installation
 
+Opdater wordpress 
+-----------------
+- login med wp.local/wp-admin 
+   - user bent 
+   - password (cDqU@uV9AaAi^JqSH
+
+- opdater wordpress, themes og alle plugins
+
 Migrering med duplicator
 ------------------------
 - skriv usernavn og password ned
 
 - lav en backup med duplicator
-- lav det nye environment uden selve wordpress pakken
+- download installer.php og zipfilen
+- vagrant halt
+- vagrant destroy
+- vagrant up
+- slet mappen sourcecode/wordpress
+- opret den nye mappe spurcecode/wordpress
 - kopier backup filerne installer og zip filen til mappen som skal være wordpress roden
-- wordpress roden er folderen der er mappet nedenfor
+- roden er sourcecode/wordpress (er også mappet nedenfor i Homestead/yaml)
+- vagrant up
 - start browseren med http://wp.local/installer.php
 - følg dialogen
-  - server wordpress
+  - host wordpress
   - database wordpress
   - user homestead
   - pwd secret
 - gå til wp.local/wp-admin
-- nu kan der logges in med usernavn **bent** og pwd fra den gamle installation (cDqU@uV9AaAi^JqSH
+- nu kan der logges in med usernavn **bent** og pwd fra den gamle installation 
+(cDqU@uV9AaAi^JqSH
 
 - Der kan under installationen efter indlæsning af databasen under options oprettes en ny admin bruger
 
