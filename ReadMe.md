@@ -8,5 +8,5 @@ ip adresser:
 192.168.0.15 javascript
 
 ## Wordpress
-user bent
-pwd (cDqU@uV9AaAi^JqSH
+user jackie
+pwd $YsEDG(Ii0R2Cq8E^X10X6Z3
