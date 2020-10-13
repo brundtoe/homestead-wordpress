@@ -34,7 +34,7 @@ Backup af en instans
 
 Opret en ny instans
 
-- opret den nye mappe spurcecode/wordpress
+- opret den nye mappe sourcecode/wordpress
 - kopier backup filerne installer og zip filen til mappen som skal være wordpress roden
 - roden er sourcecode/wordpress (er også mappet nedenfor i Homestead/yaml)
 - vagrant up
