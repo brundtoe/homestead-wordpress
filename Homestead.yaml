@@ -3,6 +3,7 @@ memory: 2048
 cpus: 1
 provider: virtualbox
 authorize: ~/.ssh/id_rsa.pub
+version: '~> 10'
 keys:
     - ~/.ssh/id_rsa
 
@@ -15,6 +16,10 @@ sites:
       to: /home/vagrant/code
       php: "7.4"
 
+variables:
+  - key: VAGRANT
+    value: 'true'
+      
 databases:
     - wordpress
 
