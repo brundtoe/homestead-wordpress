@@ -11,50 +11,47 @@ ip adresser:
 user brundtoe@outlook.dk
 pwd  se KeePassXC
 
+## Opdateret 2. marts 2021
 
-## Opdateret 12. februar 2021
+bloggen itsupport.brundtoe.dk er slettet
 
-Sitet kører på en kopi af itsupport.brundtoe.dk wp version 5.6.1
+## backup af wp.local
 
-- opdateret til laravel/homestead kører nu ubuntu 20.04
-- composer er opdateret til version 2.0.9
-- sudo apt update && sudo apt upgrade 
-- snapshot initialized er uden wordpress
+- vagrant up
+- tag en backup med duplicator
+- kopier backup til /wdmycloud/dokumenter/wordpress/wp-local/[wp-version]
+- vagrant halt
 
-Hentede ny kopi fra itsupport med Duplicator
+## refresh af laravel/homestead
+
+- tag som anført ovenfor en backup med duplicator
+- vagrant destroy
+- vagrant box prune
+
+- https://github.com/laravel/homestead check versionsnummer
+- cd laravel/Homebox/wordpress
+- opdater composer.json med det nye versionsnummer
+- composer update
+
+- kopier backup til mappen sourcecode/wordpress
+- vagrant up
+- browser http://wp.local/installer.php
 
 
-Vigtigt: afslag på tredjepart cookies er aktiveret
+- vælg opret en ny database
 
-**Tilbagekald må ikke aktiveres - så går instansen i stå**
-
-
-## Nu anvendes en kopi af itsupport.brundtoe.dk
-
-Genskabelse af Vagrant instansen
-
-Processen er som følger
-
-- Med **Duplicator** laves en kopi på itsupport
-
-  MySQL Server
+- MySQL Server
   - host:       localhost
   - host port:  3306
   - Database:   wordpress
   - user:       homestead
-  
-Vagrant instansens Homestead.yaml indeholder de samme oplysninger
+  - password:   det sædvanlige for homestead
 
-- Download de to filer
-- Slet mappen sourcecode/wordpress
-- Opret mappen sourcecode/wordpress
-- kopier de to filer til mappen wordpress
+- Følg resten af dialogen 
+- Login med user brundtoe@outlook.dk og password som for itsupport.brundtoe.dk
 
-- Start vagrant instansen Homebox/wordpress
-- gå til wp.local/installer.php
-- følg dialogen for importen
-- database oplysninger som ovenfor
-- url i indlæg transformeres under import automatisk til wp.login
+## Vigtigt: afslag på tredjepart cookies er aktiveret
 
-Login med user brundtoe@outlook.dk og password som for itsupport.brundtoe.dk
+**Tilbagekald må ikke aktiveres - så går instansen i stå**
+
 
