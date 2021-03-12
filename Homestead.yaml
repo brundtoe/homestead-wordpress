@@ -19,7 +19,10 @@ sites:
 variables:
   - key: VAGRANT
     value: 'true'
-      
+
+features:
+    - mysql
+    
 databases:
     - wordpress
 
